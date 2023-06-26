@@ -1,42 +1,57 @@
-import { Link } from 'react-router-dom';
-import { Textarea } from '../../components/Textarea';
-import { NoteItem } from '../../components/NoteItem';
-import { Section } from '../../components/Section';
-import { Button } from '../../components/Button';
-import { Header } from '../../components/Header';
+import { Container, Form } from "./styles";
 import { Input } from '../../components/Input';
+import { Button, ButtonDark } from '../../components/Button';
+import { Header } from '../../components/Header';
+import { Textarea } from '../../components/Textarea';
+import { MovieItem } from '../../components/MovieItem';
+import { Section } from '../../components/Section';
+import { FiArrowLeft } from 'react-icons/fi'
 
-import { Container, Form } from './styles';
+import { Link } from 'react-router-dom';
 
-export function New() {
-  return (
-    <Container>
-      <Header />
+export function New(){
+return(
 
-      <main>
-        <Form>
-          <header>
-            <h1>Criar nota</h1>
-            <Link to="/">voltar</ Link>
-          </header>
+  <Container>
+    <Header></Header>
 
-          <Input placeholder="Título" />
-          <Textarea placeholder="Observações"/>
+    <main>
+      <Form>
+        <header><Link to="/"> <FiArrowLeft /> voltar</Link>
+          <h1>Novo filme</h1>
 
-          <Section tilte="Links úteis">
-            <NoteItem value="https://rocketseat.com.br"/>
-            <NoteItem isNew placeholder="Novo link" />
-          </Section>
+          
+        </header>
 
-          <Section title="Marcadores">
-            <div className="tags">
-              <NoteItem value="react"/>
-              <NoteItem isNew placeholder="Nova Tag" />
-            </div>
-          </Section>
-          <Button title="Salvar" />
-        </Form>
-      </main>
-    </Container>
-  );
-}
+        <div  className = "title" >
+        <Input placeholder = "Titulo" /> <Input placeholder = "Sua nota (de 0 a 5)" />
+        </div>
+
+        <Textarea placeholder = "Observações" />
+
+       
+
+        <Section title = "Marcadores">
+
+        <div className = "tags">
+        <MovieItem value = "Aventura" />
+        <MovieItem isNew placeholder = "Novo marcador"/>
+        </div>
+
+          <div className="buttons">
+          <ButtonDark title = "Excluir filme" isInverse />
+          <Button title = "Salvar alterações" />
+          </div>
+        </Section>
+
+
+        
+
+
+      </Form>
+    </main>
+
+  </Container>
+
+)};
+

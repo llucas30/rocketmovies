@@ -1,4 +1,4 @@
-import { Container } from './styles'
+import { Container, Container2 } from './styles'
 
 export function Button({ title, loading = false, ...rest }) {
   return <Container 
@@ -7,4 +7,15 @@ export function Button({ title, loading = false, ...rest }) {
   {...rest}>
     {loading ? 'Carregando...' : title}
   </Container>
+}
+
+export function ButtonDark({title}){
+  return(
+<Container2 
+type="button"
+
+>
+ {title}
+ </Container2>
+)
 }

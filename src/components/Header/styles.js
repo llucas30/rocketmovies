@@ -12,7 +12,7 @@ export const Container = styled.header`
   border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around ;
 
   padding: 0 80px;
 `;
@@ -30,27 +30,39 @@ export const Profile = styled(Link)`
   > div {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
+    margin-right: 16px;
     line-height: 24px;
 
     span {
       font-size: 14px;
       color: ${({ theme }) => theme.COLORS.GRAY_100};
+      text-align: end;
     }
 
     strong {
-      font-size: 18px;
+      font-size: 13px;
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }
 `;
 
-export const Logout = styled.button`
-  border: none;
-  background: none;
+export const Brand  = styled.div`
+  grid-area: brand;
 
-  > svg {
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
-    font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > h1 {
+    font-size: 224x;
+    color: ${({ theme}) => theme.COLORS.PINK};
   }
+`;
+
+export const Search  = styled.div`
+  /* padding: 120px 0; */
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

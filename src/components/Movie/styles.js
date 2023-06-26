@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   width: 100%;
-  background-color: ${({ theme}) => theme.COLORS.BACKGROUND_700};
+  background-color: ${({ theme}) => theme.COLORS.INPUT};
 
   border: none;
   border-radius: 10px;
@@ -21,6 +21,20 @@ export const Container = styled.button`
   > footer {
     width: 100%;
     display: flex;
-    
+    margin-top: 24px;
+  }
+
+  > p {
+    font-size: 16px;
+    color: ${({ theme}) => theme.COLORS.GRAY_100};
+    text-align: justify;
+    margin-top: 15px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  > header {
+    display: flex;
   }
 `;
